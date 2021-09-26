@@ -6,3 +6,5 @@
 .idea/inspectionProfiles/Project_Default.xml
 Terraform/create_alb/.terraform/providers/registry.terraform.io/hashicorp/aws/2.70.0/windows_amd64/terraform-provider-aws_v2.70.0_x4.exe
 .gitignore
+Terraform/create_alb/tf_local.auto.tfvars.json
+Terraform/create_alb/.terraform/providers/registry.terraform.io/hashicorp/aws/3.58.0/windows_amd64/terraform-provider-aws_v3.58.0_x5.exe
