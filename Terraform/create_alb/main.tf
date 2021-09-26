@@ -1,21 +1,14 @@
-# Required provideres block
-terraform {
-    required_providers {
-        aws = {
-            source = "hashicorp/aws"
-        }
-    }  
-}
+# # Required provideres block
+# terraform {
+#     required_providers {
+#         aws = {
+#             source = "hashicorp/aws"
+#             version = "~> 3.0"
+#         }
+#     }  
+# }
 
 # Variables block
-variable "aws_creds" {
-  type = object({
-      access_key = string
-      secret_key = string
-  })
-  sensitive = true
-}
-
 variable "vpc_id" {}
 
 variable "app_name" {}
@@ -26,11 +19,22 @@ variable "source_cidr" {}
 
 variable "aws_region" {}
 
+# For Local Tests Only
+
+
+# variable "aws_creds" {
+#   type = object({
+#       access_key = string
+#       secret_key = string
+#   })
+#   sensitive = true
+# }
+
 # Providers block
 provider "aws" {
     region = var.aws_region
-    access_key = var.aws_creds.access_key
-    secret_key = var.aws_creds.secret_key
+    # access_key = var.aws_creds.access_key
+    # secret_key = var.aws_creds.secret_key
 }
 
 # Data Block
