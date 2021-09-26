@@ -1,0 +1,33 @@
+spec_version: 1
+kind: application
+
+inputs:
+  - AWS_Instance_Type: t3.medium
+
+source:
+  os_type: linux
+  image:
+    ami:                                                   # AWS Image
+      - id: ami-06d6e6f97777799b6
+        region: eu-west-1
+        username: root
+
+infrastructure:
+  compute:
+    spec:
+      aws:
+        instance_type: t3.micro
+  connectivity:
+    internal:
+      - port_info:
+          port: 80
+
+
+configuration:
+  healthcheck:
+    script: healthcheck.sh
+    timeout: 180
+debugging:
+  connection_protocol: SSH
+
+

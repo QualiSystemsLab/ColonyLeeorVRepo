@@ -1,0 +1,26 @@
+#    This is a sample blueprint that deploys two applications in AWS
+#    - basic_app - a simple 1 instance VM from an image
+#    - advanced_app - 2 VMs with a loadbalancer, configured with custom scripts with user inputs
+#
+#    https://colonysupport.quali.com/hc/en-us/articles/360001632548-The-Blueprint-YAML-File
+#
+---
+spec_version: 1
+kind: blueprint
+
+metadata:
+  description: Blueprint that deploys two applications in AWS
+
+
+clouds:
+  - AWS: eu-west-1
+
+applications:
+  - photon:
+      instances: 1
+
+ingress:
+  enabled: false
+
+debugging:
+  bastion_availability: enabled-on

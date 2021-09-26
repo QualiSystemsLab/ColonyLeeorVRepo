@@ -1,0 +1,8 @@
+.idea/misc.xml
+.idea/modules.xml
+.idea/quick-start-repo.iml
+.idea/vcs.xml
+.idea/workspace.xml
+.idea/inspectionProfiles/Project_Default.xml
+Terraform/create_alb/.terraform/providers/registry.terraform.io/hashicorp/aws/2.70.0/windows_amd64/terraform-provider-aws_v2.70.0_x4.exe
+.gitignore
