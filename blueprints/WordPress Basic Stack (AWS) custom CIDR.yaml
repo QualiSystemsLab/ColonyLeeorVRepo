@@ -54,6 +54,14 @@ services:
       depends_on:
         - wordpress_internal
 
+ingress:
+  listeners:
+    - http: 80
+      rules:
+        - application: WordPress
+          port: 80
+          default: true
+          shortcut: $colony.services.alb-custom-cidr.outputs.app_url
 
 debugging:
   bastion_availability: enabled-on
