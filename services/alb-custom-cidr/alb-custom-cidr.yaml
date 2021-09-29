@@ -10,7 +10,7 @@ inputs:
   # role_arn is a default role that works out of the box in AWS,
 
 module:
-  source: https://github.com/QualiSystemsLab/ColonyLeeorVRepo/tree/master/Terraform/create%20alb
+  source: https://github.com/QualiSystemsLab/ColonyLeeorVRepo/tree/master/Terraform/create-alb
 
 terraform_version: 1.0.6
 variables:
