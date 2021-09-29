@@ -58,7 +58,7 @@ ingress:
   listeners:
     - http: 80
       rules:
-        - application: WordPress
+        - application: wordpress_internal
           port: 80
           default: true
           shortcut: $colony.services.alb-custom-cidr.outputs.app_url
