@@ -155,7 +155,7 @@ resource "aws_lb_listener" "alb_listener" {
 
 # Outputs block
 output app_url {
-  value       = "${aws_lb.app_lb.dns_name}"
+  value       = "${aws_lb.app_lb.dns_name}:${var.app_port}"
   sensitive   = false
   description = "App URL"
   depends_on  = []
